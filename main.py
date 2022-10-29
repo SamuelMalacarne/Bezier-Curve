@@ -203,9 +203,6 @@ last_p = all_p[-1].copy()
 last_p[3].update(new_txt = f'P{len(quadratic_points)}')
 quadratic_points.append(last_p)
 
-for p in quadratic_points:
-    print(p[3].txt)
-
 for idx, point in enumerate(all_p[:3].copy()):
     point[3].update(new_txt = (f'P{idx}'))
     cubic_points.append(point)
@@ -327,22 +324,16 @@ while True:
                 menu = False
                 quadratic = True
                 points_rect = quadratic_points.copy()
-                for p in points_rect:
-                    print(p[3].txt)
 
             elif cub_btn.pressed():
                 menu = False
                 cubic = True
                 points_rect = cubic_points.copy()
-                for p in points_rect:
-                    print(p[3].txt)
 
             elif quar_btn.pressed():
                 menu = False
                 quartic = True
                 points_rect = quartic_points.copy()
-                for p in points_rect:
-                    print(p[3].txt)
 
 
     pygame.display.flip()
